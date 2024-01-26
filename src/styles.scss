@@ -1,1 +1,127 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#main-wrapper{
+    height: 100dvh;
+    width: 100%;
+    background: #000;
+    opacity: 1;
+    background: linear-gradient(112deg, rgba(44,30,74,1) 0%, rgba(60,32,93,1) 30%, rgba(101,44,137,1) 60%, rgba(165,40,145,1) 100%);
+    position: relative;
+    &::after{
+        width: 100%;
+        height: 100%;
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: #222;
+        opacity: 0.7;
+    }
+}
+
+app-quote-shuffler{
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    width: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -webkit-box-shadow: 0px 0px 150px -10px rgba(0,0,0,0.10);
+    -moz-box-shadow: 0px 0px 150px -10px rgba(0,0,0,0.10);
+    box-shadow: 0px 0px 150px -10px rgba(0,0,0,0.10);
+
+    h2{
+        font-size: 34px;
+        color: #f7f7f7;
+        text-align: center;
+        font-weight: 300;
+        font-family: 'Montserrat', sans-serif;
+        position: relative;
+        margin-bottom: 10px;
+        &::after{
+            position: absolute;
+            top: 105%;
+            left: 50%;
+            transform: translateX(-50%);
+            content: "";
+            display: block;
+            width: 75px;
+            height: 1px;
+            border-radius: 0;
+            background: rgb(44,30,74);
+            background: linear-gradient(112deg, rgba(44,30,74,1) 0%, rgba(60,32,93,1) 30%, rgba(101,44,137,1) 60%, rgba(165,40,145,1) 100%);
+            filter: blur(1px);
+            box-shadow: inset 0 0 0 200px rgba(255,255,255,0.05);
+        }
+    }
+    
+    .quote-wrapper{
+        min-height: 200px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        blockquote{
+            color: #ddd;
+            font-size: 26px;
+            line-height: 38px;
+            // min-height: 200px;
+            max-width: 750px;
+            margin: 10px auto 30px auto;
+            text-align: center;
+            font-family: 'Playpen Sans', cursive;
+            font-weight: 600;
+            &::after, &::before{
+                content: '"';
+                position: absolute;
+            }
+    
+            &::before{
+                margin-left: -16px;
+                margin-top: -4px;
+            }
+            &::after{
+                margin-left: 2px;
+                margin-top: -4px;
+            }
+        }
+
+        span{
+            color: #f8f8f8;
+            font-family: 'Courgette', cursive;
+
+
+        }
+    }
+    div:last-child{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #ddd;
+        font-family: 'Courgette', cursive;
+        gap: 350px;
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        background: inherit;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        box-shadow: inset 0 0 0 200px rgba(255,255,255,0.05);
+        filter: blur(10px);
+        margin: -20px;
+    }
+}
+// html, body { height: 100%; }
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,14 @@
+<h2>Quote of the day</h2>
+<div class="quote-wrapper">
+    <blockquote>{{this.isQuoteLoading ? 'Loading...' : this.quoteData.content}}</blockquote>
+    <span>{{this.isQuoteLoading ? 'Loading...' : this.quoteData.author}} <span *ngIf="this.quoteData.tags?.length"> / </span> <span *ngFor="let item of this.quoteData.tags">{{'#' + item}}</span></span>
+</div>
+<div>
+    <span></span>
+    <a target="_blank" class="twitter-share-button" [href]="'https://twitter.com/intent/tweet?text=' + this.quoteData.content">Share On X</a>
+    <button mat-icon-button (click)="this.getData()">
+        <mat-icon class="material-symbols-outlined">
+        arrow_forward
+        </mat-icon>
+    </button>
+</div>
