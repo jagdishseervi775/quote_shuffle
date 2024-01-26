@@ -23,7 +23,7 @@ Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/your-username/quote-shuffler.git
+git clone git@github.com:jagdishseervi775/quote_shuffle.git
 Install dependencies:
 
 bash
